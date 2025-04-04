@@ -50,21 +50,7 @@ python -m venv venv
 ```bash
 pip install -r requirements.txt
 ```
-
-### 3. Налаштування API Telegram
-Створіть файл `config.py` у корені проєкту зі своїми обліковими даними:
-
-```python
-api_id = 'YOUR_API_ID'
-api_hash = 'YOUR_API_HASH'
-session_name = 'your_session_name'
-```
-
-Щоб отримати `api_id` та `api_hash`, необхідно зареєструвати додаток на [офіційному порталі Telegram](https://my.telegram.org).
-
----
-
-## Примітки щодо встановлення залежностей
+#### Примітки щодо встановлення залежностей
 
 > **Увага!** Для коректної роботи програми перед встановленням залежностей рекомендується оновити менеджер пакетів `pip` до останньої версії:
 
@@ -72,7 +58,7 @@ session_name = 'your_session_name'
 python -m pip install --upgrade pip
 ```
 
-### Встановлення PyTorch
+##### Встановлення PyTorch
 
 Бібліотека `torch` (PyTorch) не встановлюється автоматично через `requirements.txt` через особливості збірки для різних систем (CPU або GPU, різні версії CUDA).
 
@@ -94,6 +80,21 @@ pip install torch torchvision torchaudio
 pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
 ```
 Якщо ви не знаєте, чи підтримує ваша відеокарта CUDA, оберіть перший варіант (CPU).
+
+### 3. Налаштування API Telegram
+Створіть файл `config.py` у корені проєкту зі своїми обліковими даними:
+
+```python
+api_id = 'YOUR_API_ID'
+api_hash = 'YOUR_API_HASH'
+session_name = 'your_session_name'
+```
+
+Щоб отримати `api_id` та `api_hash`, необхідно зареєструвати додаток на [офіційному порталі Telegram](https://my.telegram.org).
+
+---
+
+
 
 ## Використання
 

@@ -1,3 +1,3 @@
-api_id = 'YOUR_API_ID'
-api_hash = 'YOUR_API_HASH'
+API_ID = 'YOUR_API_ID'
+API_HASH = 'YOUR_API_HASH'
 SESSION_DIR = 'sessions'
