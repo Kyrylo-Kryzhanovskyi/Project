@@ -45,17 +45,18 @@ python -m venv venv
   ```
 
 ### 2. Встановлення залежностей
-Після активації середовища встановіть необхідні бібліотеки:
-
-```bash
-pip install -r requirements.txt
-```
 #### Примітки щодо встановлення залежностей
 
 > **Увага!** Для коректної роботи програми перед встановленням залежностей рекомендується оновити менеджер пакетів `pip` до останньої версії:
 
 ```bash
 python -m pip install --upgrade pip
+```
+
+Після активації середовища встановіть необхідні бібліотеки:
+
+```bash
+pip install -r requirements.txt
 ```
 
 ##### Встановлення PyTorch
@@ -85,12 +86,12 @@ pip install torch torchvision torchaudio --index-url https://download.pytorch.or
 Створіть файл `config.py` у корені проєкту зі своїми обліковими даними:
 
 ```python
-api_id = 'YOUR_API_ID'
-api_hash = 'YOUR_API_HASH'
-session_name = 'your_session_name'
+API_ID = 'YOUR_API_ID'
+API_HASH = 'YOUR_API_HASH'
+SESSION_DIR = 'sessions'
 ```
 
-Щоб отримати `api_id` та `api_hash`, необхідно зареєструвати додаток на [офіційному порталі Telegram](https://my.telegram.org).
+Щоб отримати `API_ID` та `API_HASH`, необхідно зареєструвати додаток на [офіційному порталі Telegram](https://my.telegram.org).
 
 ---
 
