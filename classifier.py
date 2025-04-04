@@ -2,6 +2,7 @@ import json
 import os
 import re
 from typing import List
+import torch
 from transformers import pipeline
 
 # Нові мітки (тільки токсичні категорії, без Safe)
@@ -15,7 +16,7 @@ LABELS = [
 class TextClassifier:
     def __init__(self,
                  model_name="MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",  # Краща модель для NLI
-                 device=0,  # 0 для GPU
+                 device = 0 if torch.cuda.is_available() else -1,  # 0 для GPU
                  threshold=0.5,  # Зменшений поріг для чутливості
                  batch_size=8):
         
